@@ -49,6 +49,36 @@ use <dbName>
 ```
 show collections
 ```
+### Querying Data
+Find
 ```
 db.<collectionName>.find()
+db.<collectionName>.find({})
+```
+
+Find with parameters
+```
+db.<collectionName>.find({key: value, ...})
+```
+Samples of find with parameters such as
+- Text
+```
+db.countries.find({continent:"Europe"})
+```
+- Number
+```
+db.cities.find({population:5.8})
+```
+- Number Compare
+```
+db.cities.find({population:{$gt:4}})
+```
+- Number Compare, multiple parameters
+```
+db.cities.find({population:{$gt:4}}, $lt:9)
+```
+
+Find One
+```
+db.<collectionName>.findOne({key: value, ...})
 ```
