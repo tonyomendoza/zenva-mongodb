@@ -75,7 +75,7 @@ db.cities.find({population:{$gt:4}})
 ```
 - Number Compare, multiple parameters
 ```
-db.cities.find({population:{$gt:4}}, $lt:9)
+db.cities.find({population:{$gt:4, $lt:9}})
 ```
 
 Find One
