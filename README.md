@@ -24,9 +24,19 @@ To use mongo
 mongo <optional params>
 ```
 
-Importing / Exporting Data
+Importing Data
 ```
-mongoimport --db <dbName> --collection <collectionName> --file <filePat
+mongoimport --db <dbName> --collection <collectionName> --file <filePath>
+```
+
+Exporting Data
+```
+mongoexport --db <dbName> --collection <collectionName> --out <filePath>
+```
+
+Data Dump
+```
+mongodump -d <dbName>
 ```
 
 Once you are using mongo, then you can run some of the following commands
