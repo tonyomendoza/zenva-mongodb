@@ -3,7 +3,9 @@ const router = express.Router();
 const City = require('../models/City');
 
 router.get('/', (req, res, next) =>{
-    City.find(null)
+    const query = req.query;
+
+    City.find(query)
         .then(cities => {
             res.json({
                 confirmation: 'success',

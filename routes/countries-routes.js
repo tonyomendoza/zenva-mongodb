@@ -3,7 +3,9 @@ const router = express.Router();
 const Country = require('../models/Country');
 
 router.get('/', (req, res, next) =>{
-    Country.find(null)
+    const query = req.query;
+
+    Country.find(query)
         .then(countries => {
             res.json({
                 confirmation: 'success',
