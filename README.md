@@ -39,7 +39,7 @@ Data Dump
 mongodump -d <dbName>
 ```
 
-Once you are using mongo, then you can run some of the following commands
+Once you are in the mongoshell, then you can run some of the following commands
 ```
 show dbs
 ```
@@ -81,4 +81,13 @@ db.cities.find({population:{$gt:4, $lt:9}})
 Find One
 ```
 db.<collectionName>.findOne({key: value, ...})
+```
+
+### Inserting Data
+```
+db.<collectionName>.insert({params})
+```
+Example
+```
+db.countries.insert({"_id":"005", "name":"australia", "country":"australia","population":24.1})
 ```
