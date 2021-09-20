@@ -107,11 +107,19 @@ db.countries.update({_id:"005"}, {$set:{population:24}})
 ### Deleting Data
 Delete One
 ```
-db.<collectionName>.deleteOne({_id:"<id>"})
+db.<collectionName>.deleteOne({params})
+```
+Example
+```
+db.cities.deleteOne({_id:"<id>"})
 ```
 Delete Many
 ```
 db.<collectionName>.deleteMany({params})
+```
+Example
+```
+db.countries.deleteMany({"continent":"europe"})
 ```
 Drop
 ```
