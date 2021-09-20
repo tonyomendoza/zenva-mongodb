@@ -20,4 +20,22 @@ router.get('/', (req, res, next) =>{
         })
 });
 
+router.get('/:id', (req, res, next) =>{
+    const query = req.query;
+
+    Country.findById(req.params.id)
+        .then(country => {
+            res.json({
+                confirmation: 'success',
+                data: country
+            })
+        })
+        .catch(err => {
+            res.json({
+                confirmation: 'fail',
+                message: 'Country with ID ' + req.params.id + ' not found.'
+            })
+        })
+});
+
 module.exports = router;
