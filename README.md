@@ -49,6 +49,9 @@ use <dbName>
 ```
 show collections
 ```
+
+## CRUD Operations
+
 ### Querying Data
 Find
 ```
@@ -94,9 +97,22 @@ db.countries.insert({"_id":"005", "name":"australia", "country":"australia","pop
 
 ### Updating Data
 ```
-db.countries.update({_id:<id>"}, {$set:{<params>});
+db.countries.update({_id:"<id>"}, {$set:{<params>})
 ```
 Example
 ```
-db.countries.update({_id:"005"}, {$set:{population:24}});
+db.countries.update({_id:"005"}, {$set:{population:24}})
 ```
+
+### Deleting Data
+Delete One
+```
+db.<collectionName>.deleteOne({_id:"<id>"})
+```
+Delete Many
+```
+db.<collectionName>.deleteMany({params})
+```
+Drop
+```
+db<collectionName>.drop()
