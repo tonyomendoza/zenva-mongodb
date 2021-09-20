@@ -91,3 +91,12 @@ Example
 ```
 db.countries.insert({"_id":"005", "name":"australia", "country":"australia","population":24.1})
 ```
+
+### Updating Data
+```
+db.countries.update({_id:<id>"}, {$set:{<params>});
+```
+Example
+```
+db.countries.update({_id:"005"}, {$set:{population:24}});
+```
