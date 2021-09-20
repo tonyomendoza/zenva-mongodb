@@ -1,0 +1,23 @@
+{
+  "name": "zenva-mongodb",
+  "version": "1.0.0",
+  "description": "## Windows Installation",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tonyomendoza/zenva-mongodb.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tonyomendoza/zenva-mongodb/issues"
+  },
+  "homepage": "https://github.com/tonyomendoza/zenva-mongodb#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.0.7"
+  }
+}
